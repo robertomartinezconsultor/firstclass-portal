@@ -782,7 +782,7 @@ function filterPhotos(btn){
 function handleUpload(e){
   if(!e.target.files.length) return;
   const p=window._p;
-  const msg=encodeURIComponent('Hi '+p.director+', I'm sending '+e.target.files.length+' photo(s) for project '+p.project+' at '+p.address+'.');
+  const msg=encodeURIComponent('Hi '+p.director+', I\'m sending '+e.target.files.length+' photo(s) for project '+p.project+' at '+p.address+'.');
   window.open('https://wa.me/'+p.dirPhone+'?text='+msg,'_blank');
   showToast('✅ Opening WhatsApp...');
 }
