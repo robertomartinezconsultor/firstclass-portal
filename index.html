@@ -694,9 +694,7 @@ function loadProject(p) {
   document.getElementById('endDate').textContent = p.end;
   document.getElementById('photoCount').textContent = p.photos;
   document.getElementById('balanceDue').textContent = p.balance;
-  // Director
-  document.getElementById('dirName').textContent = p.director;
-  document.getElementById('msgDir').textContent = p.director;
+  // Director (names are static in HTML — Roberto + Joe)
   // Invoice
   document.getElementById('invNum').textContent = p.invNum;
   document.getElementById('invClient').textContent = p.client;
@@ -807,7 +805,7 @@ function sendMessage(){
 }
 function contactDirector(){
   const p=window._p;
-  const msg=encodeURIComponent('Hi '+p.director+', I'm writing from the First Class client portal regarding my project: '+p.project+' at '+p.address+'.');
+  const msg=encodeURIComponent('Hi '+p.director+', I\'m writing from the First Class client portal regarding my project: '+p.project+' at '+p.address+'.');
   window.open('https://wa.me/'+p.dirPhone+'?text='+msg,'_blank');
 }
 function callDirector(){ window.location.href='tel:+'+window._p.dirPhone; }
